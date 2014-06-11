@@ -3,10 +3,10 @@ hostname=`hostname -s`
 dir=""
 case "${hostname}" in
     jeromeLaptop1)
-        dir="jeromeLaptop1"
+        dir="homeLaptop1"
         ;;
     Jeromes-MacBook-Pro)
-        dir="placeiq"
+        dir="officeLaptop1"
         ;;
 esac
 
