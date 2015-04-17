@@ -51,24 +51,4 @@ ZSH_THEME="ys"
 plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-export PATH="/usr/local/bin:/usr/local/hadoop-2.0.0-mr1-cdh4.4.0/bin:/usr/local/pig-0.11.0-cdh4.4.0/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/jerome/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export PATH=/usr/local/bin:$PATH
