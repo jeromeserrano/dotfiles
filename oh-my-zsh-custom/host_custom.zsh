@@ -10,6 +10,8 @@ case "${hostname}" in
         ;;
 esac
 
-find $HOME/.oh-my-zsh/custom/$dir -name '*.zsh' | while read file; do
-    source $file
-done
+if [ $dir ]; then
+	find $HOME/.oh-my-zsh/custom/$dir -name '*.zsh' | while read file; do
+	    source $file
+	done
+fi
