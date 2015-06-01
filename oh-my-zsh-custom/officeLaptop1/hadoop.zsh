@@ -1,3 +1,7 @@
+export HADOOP_HOME=/usr/local/hadoop-2.3.0-mr1-cdh5.1.3
+export HADOOP_CONF_DIR=/Users/jerome/hadoop-conf/hyena
+export PATH=/usr/local/hadoop-2.3.0-mr1-cdh5.1.3/bin:$PATH
+
 alias hls='hadoop dfs -ls'
 alias hlsh='hadoop dfs -ls -h'
 alias hlsrh='hadoop dfs -lsr -h'
