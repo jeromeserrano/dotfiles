@@ -83,7 +83,7 @@ let java_minlines = 150
 augroup filetypedetect
    au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
    au BufRead,BufNewFile *.g4 set filetype=antlr4
-augroup END 
+augroup END
 
 " Highlight ExtraWhitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
