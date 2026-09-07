@@ -1,0 +1,16 @@
+#
+# Defines environment variables.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
+
+# Optional machine-local environment. Put PATH entries needed by every shell
+# in this file rather than .zshrc.local because .zshenv is read by interactive
+# and non-interactive shells.
+[[ -f ~/.zshenv.local ]] && source ~/.zshenv.local

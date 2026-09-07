@@ -1,0 +1,36 @@
+# Enable Powerlevel10k instant prompt. Must stay at the top.
+# Nothing that produces output may run before this block.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Source Prezto first so its modules (completion, history, etc.) are available
+# for everything that follows.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# fzf — fuzzy finder (history, files, cd)
+if command -v fzf >/dev/null; then
+  source <(fzf --zsh)
+fi
+
+# zoxide — smart cd (replaces plain cd with history-aware jumping)
+if command -v zoxide >/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
+# Detect macOS appearance before vim starts and pass it in, so it opens in the
+# right Everforest variant with no post-launch flash. Also defined in .zprofile
+# (see there). Keep the two in sync.
+vim() {
+  local bg=light
+  /usr/bin/defaults read -g AppleInterfaceStyle >/dev/null 2>&1 && bg=dark
+  command vim --cmd "let g:macos_appearance='$bg'" "$@"
+}
+
+# Prompt
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Optional machine-local interactive configuration.
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

@@ -1,0 +1,48 @@
+onboarding = false
+
+[theme]
+# Everforest isn't a built-in herdr theme (confirmed on 0.6.10, 0.7.1, and the
+# official docs) and there's no way to add one. gruvbox is the closest built-in
+# — same warm, low-blue family. auto_switch follows macOS light/dark just like
+# WezTerm; the main content area is a WezTerm pane anyway, so it shows real
+# Everforest — herdr only styles the sidebar/tabs/accents in gruvbox.
+name = "gruvbox"
+auto_switch = true
+dark_name = "gruvbox"
+light_name = "gruvbox-light"
+
+[terminal]
+# New panes inherit the CWD of the current pane — most useful when
+# splitting inside a project directory.
+new_cwd = "follow"
+
+# Login shells in panes. Note "login" does not imply interactive, so put
+# machine-local PATH setup in ~/.zshenv.local rather than ~/.zshrc.local.
+shell_mode = "login"
+
+[ui]
+# Show agents across all workspaces in the sidebar.
+agent_panel_scope = "all"
+
+# Use system notifications when an agent finishes or needs attention
+# while you're in a different workspace.
+notification = "system"
+
+agent_panel_sort = "priority"
+[session]
+# Resume Claude Code and other agent sessions after a herdr restart
+# so you don't lose conversation context.
+resume_agents_on_restore = true
+
+[update]
+channel = "stable"
+
+[experimental]
+# Persist pane scrollback across server restarts — useful when reviewing
+# long Claude Code output after a reconnect.
+pane_history = true
+
+
+[advanced]
+# 50MB scrollback — generous for long Python tracebacks and agent output.
+scrollback_limit_bytes = 50000000

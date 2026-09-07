@@ -1,0 +1,11 @@
+brew "fzf"
+brew "glow"
+brew "mise"
+brew "vim"
+brew "zbar"
+brew "zoxide"
+brew "herdr"
+brew "whisperkit-cli"
+
+cask "font-jetbrains-mono"
+cask "wezterm"

@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+*.swo
+*~
+.env
+*.local
+
+# Herdr runtime state belongs to each machine.
+herdr/*.log
+herdr/*.sock
+herdr/release-notes.json
+herdr/session*.json
