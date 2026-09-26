@@ -84,3 +84,5 @@ vim() {
   /usr/bin/defaults read -g AppleInterfaceStyle >/dev/null 2>&1 && bg=dark
   command vim --cmd "let g:macos_appearance='$bg'" "$@"
 }
+
+export PATH="$HOME/.elan/bin:$PATH"

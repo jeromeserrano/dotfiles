@@ -7,8 +7,8 @@ repository.
 ## Install
 
 ```sh
-git clone git@github.com:onis123/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone git@github.com:jeromeserrano/dotfiles.git ~/dev/dotfiles
+cd ~/dev/dotfiles
 ./install.sh
 ```
 
@@ -41,11 +41,11 @@ terminal history.
 
 ## Updating
 
-Edit through either the files in `~/dotfiles` or their home-directory symlinks,
+Edit through either the files in `~/dev/dotfiles` or their home-directory symlinks,
 then:
 
 ```sh
-cd ~/dotfiles
+cd ~/dev/dotfiles
 git status
 git add <files>
 git commit
