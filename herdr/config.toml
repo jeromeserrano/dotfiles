@@ -24,11 +24,13 @@ shell_mode = "login"
 # Show agents across all workspaces in the sidebar.
 agent_panel_scope = "all"
 
+agent_panel_sort = "priority"
+
 # Use system notifications when an agent finishes or needs attention
 # while you're in a different workspace.
-notification = "system"
+[ui.toast]
+delivery = "system"
 
-agent_panel_sort = "priority"
 [session]
 # Resume Claude Code and other agent sessions after a herdr restart
 # so you don't lose conversation context.
