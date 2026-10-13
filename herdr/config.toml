@@ -26,6 +26,14 @@ agent_panel_scope = "all"
 
 agent_panel_sort = "priority"
 
+[ui.sidebar.agents]
+# Keep each agent on one line; omit the agent implementation name (codex/claude).
+rows = [["state_icon", "machine", "workspace", "tab"]]
+
+[ui.sidebar.spaces]
+# Keep each space on one line; omit branch and Git status details.
+rows = [["state_icon", "workspace"]]
+
 # Use system notifications when an agent finishes or needs attention
 # while you're in a different workspace.
 [ui.toast]
